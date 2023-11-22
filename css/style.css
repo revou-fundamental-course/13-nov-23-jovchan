@@ -1,0 +1,346 @@
+/* default */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: content-box;
+}
+
+:root {
+    --black: #3B4754;
+    --white: #EDF0F4;
+    --gray: #798DA3;
+}
+
+html {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 10px;
+    }
+
+    section {
+        padding: 2vh 2vw !important;
+    }
+
+    .brand-icon {
+        width: 80px !important;
+    }
+
+    
+    #Home main{
+        flex-direction: column;
+        align-items: center !important;
+        margin-bottom: 40px;
+    }
+
+    #Home main > div{
+        width: 80% !important;
+    }
+
+    #Home main aside {
+        width: 80% !important;
+        border-radius: 10px;
+    }
+
+    #Package>div {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    #Contact {
+        padding: 2vh !important;
+    }
+    #Contact > p{
+        width: 80% !important;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* global */
+a {
+    text-decoration: none;
+}
+
+.icon {
+    width: 25px;
+    background-color: var(--white);
+    padding: 10px;
+    display: flex;
+    border-radius: 100%;
+    aspect-ratio: 1;
+}
+
+.brand-icon {
+    width: 200px;
+}
+
+section {
+    border-block: 1px solid var(--white);
+    padding: 3vh 5vw;
+}
+
+p {
+    color: var(--gray);
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--black);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+.line {
+    padding: 3px 10%;
+    background-color: var(--white);
+    border-radius: 100px;
+    margin-block: 2vh;
+    margin-inline: auto;
+}
+
+/* bagian atas / header */
+#header {
+    justify-content: space-between;
+    display: flex;
+}
+
+nav {
+    display: flex;
+}
+
+nav button {
+    background-color: white;
+    border: 0px;
+}
+
+nav a {
+    padding-inline: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#b-home {
+    border: 2px solid black;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#b-package {
+    border-block: 2px solid black;
+}
+
+#b-call {
+    border: 2px solid black;
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* bagian utama 1 */
+#Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Home>h1 {
+    margin-block: 5vh 8vh;
+    text-align: center;
+}
+
+#Home>p {
+    margin-bottom: 5vh;
+    font-size: 1.5rem;
+}
+
+#Home main {
+    margin-top: 10vh;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#Home main > div{
+    width: 50%;
+}
+
+#Home main .slide {
+    display: none;
+    flex-direction: column;
+    animation: fadein 2s;
+}
+
+#Home main .slide img {
+    background-color: var(--white);
+    aspect-ratio: 3/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 100%;
+}
+
+#Home main .slide .description {
+    padding: 4vw;
+}
+
+#Home main .slide .description>q {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+#Home main .slide .description>div {
+    margin-top: 3vh;
+    display: flex;
+    align-items: start;
+    gap: 1vw;
+}
+
+#Home main #information{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 40px;
+}
+
+#Home main #information > div{
+    display: flex;
+    gap: 1vw;
+}
+
+#Home aside {
+    width: 25%;
+    background-color: var(--white);
+    padding: 3vw 4vw;
+    border-radius: 10px;
+}
+
+#Home aside>p {
+    margin-block: 3vh 8vh;
+}
+
+#Home aside form {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+#Home aside form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#Home aside form>div label {
+    font-weight: bold;
+}
+
+#Home aside form>div .input {
+    border: 2px solid var(--gray);
+    padding: 2vh 1vw;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#Home aside form>button {
+    font-style: bold;
+    background-color: var(--black);
+    color: var(--white);
+    padding-block: 3vh;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* bagian utama 2 / package */
+#Package-header {
+    background-color: var(--white);
+    padding: 10vh 0vw 20vh 0vw;
+    display: flex;
+    justify-content: center;
+}
+
+#Package {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    flex-direction: column;
+}
+
+#Package>div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-block: 8vh 20vh;
+}
+
+#Package>div>div {
+    padding-inline: 3vw;
+    display: flex;
+    gap: 1vw;
+    align-items: start;
+}
+
+/* bagian utama 3 / call */
+#Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh;
+}
+
+#Contact p {
+    margin-block: 5vh 10vh;
+    width: 60%;
+}
+
+#Contact button {
+    font-style: bold;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3vh 5vw;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 5vh;
+}
+
+/* bagian bawah / footer */
+footer {
+    padding-block: 8vh;
+    border-top: 2px solid var(--white);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+footer div {
+    display: flex;
+    gap: 1vw;
+}
